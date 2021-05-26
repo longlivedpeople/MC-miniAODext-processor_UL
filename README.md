@@ -46,6 +46,21 @@ Further details, the configuration of these config files was set to:
 --python_filename MC-RunIISummer20UL16MiniAODextended_cfg.py --eventcontent MINIAODSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier MINIAODSIM --fileout file:RunIISummer20UL16MiniAODextended.root --conditions 106X_mcRun2_asymptotic_v13 --step PAT --geometry DB:Extended --filein file:input.root --era Run2_2016 --runUnscheduled --no_exec --mc -n 10
 ```
 
+## 2.3 2018
+
+Run from Run2018 dir:
+```
+cd Run2018
+```
+
+To launch each background production, you must set your storage site in the crab cfg crab_backgroun*.py e.g. /store/user/fernance.
+
+To submit each background, just type:
+```
+voms-proxy-init --voms cms
+cmsenv
+crab submit crab_*.py
+```
 
 
 
